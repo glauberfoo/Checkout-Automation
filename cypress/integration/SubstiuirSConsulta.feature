@@ -10,18 +10,21 @@ Como usuário, desejo substituir um produto sem consulta.
     Cenário: Substituir um produto sem consulta
     Quando eu estou na tela replacement
     E seleciono no campo de fc o "FC1 - Osasco"
-    E adiciono no campo data de entrega "06/11/2022"
+    E adiciono no campo data de entrega "04/26/2022"
     E clico em buscar
-    E clico no checkbox do pedido "1649091565_1320223_M" e que tenha o id_modelo "NAT1774"
+    E clico no checkbox do pedido "meu_teste_0043" e que tenha o id_modelo "SHOP01"
     E clico em substituir
     E clico no produto
     E busco pelo produto "açaí"
     E seleciono pelo produto "SUCO DE AÇAÍ C/ ABACAXI, LIMÃO E HORTELÃ NATIVE BERRIES LATA 250ML"
     E clico em adicionar
-    E seleciono pelo produto "BARRA VITTAY TASTY AÇAÍ, UVA E ALFARROBA C/3 75G"
-    E clico em adicionar
-    E seleciono pelo produto "GELEIA HOMEMADE ORGÂNICA AÇAÍ E BANANA 190G"
-    E clico em adicionar
-    E clico em substituir
+    E clico em substituir s/ consulta
+    E clico em confirmar
     E clico em voltar
-    Então devo visualizar a tela replacement
+    E seleciono no campo de fc o "FC1 - Osasco"
+    E adiciono no campo data de entrega "04/26/2022"
+    E clico em buscar
+    E clico no checkbox do pedido "meu_teste_0043" e que tenha o id_modelo "SHOP01"
+    E verifico se o statudo da Pendeência dele é Aguardando confirmação
+    E clico em confirmar
+    Então devo visualizar a mensagem "Substituições efetuadas com sucesso!"
